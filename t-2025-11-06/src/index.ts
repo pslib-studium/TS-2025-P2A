@@ -29,5 +29,10 @@ console.log(text.startsWith("Malý"));
 console.log(text.indexOf("Daniel"));
 console.log(text.indexOf("X"));
 
-text.normalize("NFD")
-console.log(text);
+function removeDiacritics(text: string): string {
+  return text
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "");
+}
+
+console.log(removeDiacritics(text)); 
