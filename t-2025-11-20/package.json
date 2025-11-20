@@ -1,0 +1,56 @@
+{
+  "name": "t-2025-11-20",
+  "version": "0.1.5",
+  "description": "Počáteční kód pro konzolové aplikace v Typescriptu",
+  "scripts": {
+    "dev": "ts-node-dev --respawn --clear src/index.ts",
+    "dev:debug": "cross-env NODE_OPTIONS=--inspect=9229 ts-node-dev --respawn --clear src/index.ts",
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/index.js",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "format": "prettier --write .",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [],
+  "author": "Michal Stehlík",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/readline-sync": "^1.4.8",
+    "cross-env": "^10.0.0",
+    "prettier": "^3.3.0",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.6.2",
+    "vitest": "^2.0.5"
+  },
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pslib-cz/console-app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pslib-cz/console-app/issues"
+  },
+  "homepage": "https://github.com/pslib-cz/console-app#readme",
+  "files": [
+    "src",
+    "tsconfig.json",
+    "vitest.config.ts",
+    ".prettierrc.json",
+    ".vscode",
+    "README.md",
+    ".gitignore"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "private": true
+}

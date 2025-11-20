@@ -6,6 +6,7 @@
 * [Teorie 2.10.2025](/t-2025-10-02)
 * [Teorie 9.10.2025](/t-2025-10-09)
 * [Teorie 6.11.2025](/t-2025-11-06)
+* [Teorie 20.11.2025](/t-2025-11-20) - objekty
 
 ````
 npm create @pslib/ts-console@latest moje-app
