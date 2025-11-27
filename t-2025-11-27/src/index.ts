@@ -1,4 +1,4 @@
-import { Person } from "./models/person-original";
+import { Person } from "./models/person";
 
 const p1 = new Person();
 console.log("p1:", p1.firstName, p1.Age);
@@ -7,6 +7,9 @@ const p2 = new Person("Alice", 20);
 console.log("p2:", p2.firstName, p2.Age);
 
 p2.greet();
+p1.firstName = "Otmar";
+// p1.age = 10; // nelze - age je privátní
+console.log("p1:", p1.firstName, p1.Age);
 p2.celebrateBirthday(1);
 
 console.log("Age přes getter:", p2.Age);

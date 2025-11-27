@@ -1,35 +1,32 @@
 export class Person {
-    // === Atributy ===
-    public firstName: string;
-    private age: number;         // Přístupné jen uvnitř třídy
+    public firstName: string = "Alois" // veřejný atribut
+    private age: number; // privátní atribut
     private _salary: number = 0; // Pro ukázku getter/setter páru
 
-    // === Konstruktor bez parametrů ===
+  // === Konstruktor bez parametrů ===
     constructor();
     // === Konstruktor s parametry ===
-    constructor(firstName: string, age: number);
-    constructor(firstName?: string, age?: number) {
+    constructor(firstName: string, age: number); // přetížené konstruktory
+    constructor(firstName?: string, age: number = 0) { // konstruktor
         this.firstName = firstName ?? "Unknown";
-        this.age = age ?? 0;
+        this.age = age;
     }
 
-    // === Metoda bez parametru ===
-    public greet(): void {
+    public greet(): void { // metoda
         console.log(`Hello, I'm ${this.firstName}.`);
     }
 
-    // === Metoda s parametrem ===
-    public celebrateBirthday(years: number): void {
+    public celebrateBirthday(years: number): void { // metoda s parametrem
         this.age += years;
         console.log(`New age: ${this.age}`);
     }
 
     // === Getter jen pro čtení ===
-    public get Age(): number {
+    public get Age(): number {  // vlastnost
+        if (this.age < 0 ) return 0;
         return this.age;
     }
 
-    // === Getter + setter plně přístupný ===
     public get salary(): number {
         return this._salary;
     }
@@ -43,6 +40,7 @@ export class Person {
 
     // === Pouze setter (např. logika bez čtení) ===
     private _internalCode: string = "";
+    
     public set internalCode(value: string) {
         this._internalCode = value.trim();
     }
