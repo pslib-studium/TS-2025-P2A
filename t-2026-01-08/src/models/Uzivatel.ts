@@ -1,7 +1,13 @@
 abstract class Uzivatel {
   constructor(public jmeno: string) {}
 
-  abstract vypisInfo(): void;
+  vypisInfo() {
+    console.log("Default");
+  }
+
+  doSomething() {
+    console.log("SMTNG");
+  }
 }
 
 export default Uzivatel;
