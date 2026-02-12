@@ -10,6 +10,7 @@
 * [Teorie 04.12.2025](/t-2025-12-04) - třídy, objektové vlastnosti
 * [Teorie 11.12.2025](/t-2025-12-11) - abstraktní třídy, rozhraní, statické členy
 * [Teorie 08.01.2026](/t-2026-01-08) - polymorfismus
+* [Teorie 12.02.2026](/t-2026-02-12) - datum a čas
 
 ````
 npm create @pslib/ts-console@latest moje-app
